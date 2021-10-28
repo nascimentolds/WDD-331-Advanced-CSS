@@ -1,0 +1,20 @@
+//set icon size
+.icon {
+    width: $icon-size;
+    height: $icon-size;
+}
+
+.number {
+    text-align: center;
+    font-size: $font-size-number;
+    //an icon that is part of a number should be half the normal size
+    & > .icon {
+        width: $icon-size * 0.5;
+        height: $icon-size * 0.5;
+    }
+}
+
+//rotate bottom pips 180deg
+.rotate {
+    transform: rotate(180deg);
+}
