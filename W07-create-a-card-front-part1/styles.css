@@ -1,0 +1,83 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  border: 1px solid grey;
+  height: 56vw;
+  width: 40vw;
+  border-radius: 10px;
+  margin: 20px;
+  -webkit-box-shadow: 2px 2px 4px grey;
+          box-shadow: 2px 2px 4px grey;
+}
+
+.card-front {
+  padding: 0.5em;
+}
+
+.icon {
+  width: 8vw;
+  height: 8vw;
+}
+
+.number {
+  text-align: center;
+  font-size: 4vw;
+}
+
+.number > .icon {
+  width: 4vw;
+  height: 4vw;
+}
+
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.row {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 14% 24% 24% 24% 14%;
+      grid-template-columns: 14% 24% 24% 24% 14%;
+}
+
+.row :nth-child(3) {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+}
+
+.row :nth-child(4) {
+  grid-column: 1 / -1;
+}
+
+.row :nth-child(5),
+.row :nth-child(7) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.row :nth-child(6),
+.row :nth-child(8) {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+}
+
+.row .cell {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+/*# sourceMappingURL=styles.css.map */
