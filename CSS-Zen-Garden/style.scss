@@ -1,0 +1,411 @@
+@import 'partials/reset';
+@import 'partials/variables';
+@import 'partials/typography';
+@import 'partials/background';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.7em;
+  font-family: $primary-font;
+  color: $color-5;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $secondary-font;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.page-wrapper {
+  padding: 4rem 4rem;
+
+  &:first-child {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+  }
+}
+
+abbr {
+  text-decoration: none;
+}
+
+header {
+  h1 {
+    width: 60%;
+    font-size: 2em;
+    text-transform: uppercase;
+    line-height: 1.3em;
+    color: $color-3;
+  }
+
+  h2 {
+    width: 80%;
+    font-size: 2em;
+    line-height: 1.3em;
+    color: $color-5;
+    margin-top: 3rem;
+
+    abbr {
+      color: $color-3;
+    }
+  }
+}
+
+.summary {
+  p:last-child {
+    margin-top: 3rem;
+    line-height: 3em;
+    text-align: right;
+
+    a:link,
+    a:visited,
+    a:active {
+      display: inline-block;
+      width: 130px;
+      border-radius: 10px;
+      text-align: center;
+      margin: 5px;
+      background-color: $color-3;
+      color: $color-5;
+    }
+
+    a:last-of-type {
+      background-color: $color-5;
+      color: $color-3;
+    }
+
+    a:hover {
+      background: darken($color-3, 20%);
+    }
+
+    a:last-of-type:hover {
+      background: darken($color-6, 10%);
+    }
+  }
+}
+
+section {
+  .preamble {
+    margin-top: 5rem;
+    line-height: 1.3em;
+
+    h3 {
+      font-size: 1.3em;
+      color: $color-4;
+      margin-top: 60px;
+      margin-left: 70px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+
+    h3::before {
+      content: "";
+      background: url("./assets/icon-1.svg") no-repeat;
+      position: absolute;
+      float: left;
+      left: 10px;
+      margin-left: 20px;
+      margin-top: -5px;
+      padding: 1.7em;
+      display: flex;
+      flex-direction: row;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.main {
+
+  line-height: 1.3em;
+
+  h3 {
+    font-size: 1.3em;
+    color: $color-4;
+    margin-top: 60px;
+    margin-left: 70px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  .explanation,
+  .benefits {
+    text-align: right;
+
+    h3 {
+      margin-right: 60px;
+      padding-bottom: 10px;
+    }
+
+    h3::before {
+      content: "";
+      position: absolute;
+      float: right;
+      right: 40px;
+      padding: 1.3em;
+      display: flex;
+      flex-direction: row;
+    }
+
+  }
+
+  .explanation {
+    h3::before {
+      content: "";
+      background: url("./assets/icon-2.svg") no-repeat;
+      margin-top: -10px;
+    }
+  }
+
+  .benefits {
+    h3::before {
+      content: "";
+      background: url("./assets/icon-4.svg") no-repeat;
+      margin-top: -15px;
+    }
+  }
+
+  .participation,
+  .requirements {
+    h3::before {
+      content: "";
+      position: absolute;
+      float: left;
+      left: 10px;
+      margin-left: 20px;
+      padding: 1.7em;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .participation {
+    h3::before {
+      content: "";
+      background: url("./assets/icon-3.svg") no-repeat;
+      margin-top: -15px;
+      transform: rotate(-20deg);
+    }
+  }
+
+  .requirements {
+    h3::before {
+      content: "";
+      background: url("./assets/icon-5.svg") no-repeat;
+      margin-top: -15px;
+      transform: rotate(-10deg);
+    }
+
+    p:last-child {
+      background-color: $color-3;
+      padding: 3rem;
+      border-radius: 30px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+  }
+
+  a:link,
+  a:visited,
+  a:active {
+    color: $color-4;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      width: 50px;
+      height: 50px;
+      padding: 1.5rem;
+      font-size: 0;
+    }
+
+    :nth-child(1) {
+      background: url("/assets/html-5.png") center center/50px no-repeat;
+    }
+
+    :nth-child(2) {
+      background: url("/assets/css3.png") center center/50px no-repeat;
+    }
+
+    :nth-child(3) {
+      background: url("/assets/creative-commons.png") center center/50px no-repeat;
+    }
+
+    :nth-child(4) {
+      background: url("/assets/accessibility1.png") center center/50px no-repeat;
+    }
+
+    :nth-child(5) {
+      background: url("/assets/github.png") center center/50px no-repeat;
+    }
+
+  }
+
+}
+
+.design-selection {
+  background-color: $color-1;
+  padding: 3.5rem;
+  border-radius: 30px;
+  font-family: $primary-font;
+
+  h3 {
+    font-size: 1.3em;
+    color: $color-4;
+    margin-bottom: 3rem;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  li {
+
+    a:link:first-child,
+    a:visited,
+    a:active {
+      color: $color-5;
+      font-family: $secondary-font;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  a:link,
+  a:visited,
+  a:active {
+    color: $color-3;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+}
+
+.design-archives {
+  text-align: center;
+  margin-top: 3rem;
+
+  h3 {
+    font-size: 1.3em;
+    color: $color-4;
+    margin-bottom: 3rem;
+  }
+
+  a:link,
+  a:visited,
+  a:active {
+    display: inline-block;
+    width: 130px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+    background-color: $color-3;
+    color: $color-5;
+    padding: 1.5rem;
+  }
+
+  .viewall a {
+    background-color: $color-5;
+    color: $color-3;
+  }
+
+  a:hover {
+    background: darken($color-3, 20%);
+  }
+
+  a:last-of-type:hover {
+    background: darken($color-6, 10%);
+  }
+
+}
+
+.zen-resources {
+  background-color: $color-6;
+  padding: 3.5rem;
+  border-radius: 30px;
+  font-family: $primary-font;
+  margin-top: 3rem;
+  line-height: 1.5em;
+  margin-bottom: 4rem;
+
+  h3 {
+    font-size: 1.3em;
+    color: $color-3;
+    margin-bottom: 3rem;
+  }
+
+  a:link,
+  a:visited,
+  a:active {
+    color: $color-1;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+}
+
+.extra1 {
+  width: 100%;
+  height: 300px;
+  background-image: url(./assets/terra.svg);
+  background-position: top;
+  background-size: 130%, cover;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.extra2 {
+  position: absolute;
+  left: 190px;
+  top: -130px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/lua.svg);  
+  background-repeat: no-repeat, no-repeat;
+}
+
+.extra3 {
+  position: absolute;
+  left: -80px;
+  top: -80px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/planet1.png);  
+  background-repeat: no-repeat, no-repeat;
+  background-size: 180px;
+}

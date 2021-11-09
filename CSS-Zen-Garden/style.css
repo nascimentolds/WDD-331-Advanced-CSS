@@ -1,0 +1,470 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  /* this is the page background */
+  background: -webkit-gradient(linear, left top, left bottom, from(#271852), to(#5B2D7E));
+  background: linear-gradient(#271852, #5B2D7E);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.7em;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Audiowide", cursive;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.page-wrapper {
+  padding: 4rem 4rem;
+}
+
+.page-wrapper:first-child {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+header h1 {
+  width: 60%;
+  font-size: 2em;
+  text-transform: uppercase;
+  line-height: 1.3em;
+  color: #FF11CB;
+}
+
+header h2 {
+  width: 80%;
+  font-size: 2em;
+  line-height: 1.3em;
+  color: #ffffff;
+  margin-top: 3rem;
+}
+
+header h2 abbr {
+  color: #FF11CB;
+}
+
+.summary p:last-child {
+  margin-top: 3rem;
+  line-height: 3em;
+  text-align: right;
+}
+
+.summary p:last-child a:link,
+.summary p:last-child a:visited,
+.summary p:last-child a:active {
+  display: inline-block;
+  width: 130px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 5px;
+  background-color: #FF11CB;
+  color: #ffffff;
+}
+
+.summary p:last-child a:last-of-type {
+  background-color: #ffffff;
+  color: #FF11CB;
+}
+
+.summary p:last-child a:hover {
+  background: #aa0085;
+}
+
+.summary p:last-child a:last-of-type:hover {
+  background: #d1d1d1;
+}
+
+section .preamble {
+  margin-top: 5rem;
+  line-height: 1.3em;
+}
+
+section .preamble h3 {
+  font-size: 1.3em;
+  color: #99F0FF;
+  margin-top: 60px;
+  margin-left: 70px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+section .preamble h3::before {
+  content: "";
+  background: url("./assets/icon-1.svg") no-repeat;
+  position: absolute;
+  float: left;
+  left: 10px;
+  margin-left: 20px;
+  margin-top: -5px;
+  padding: 1.7em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section .preamble p {
+  margin-bottom: 2rem;
+}
+
+.main {
+  line-height: 1.3em;
+}
+
+.main h3 {
+  font-size: 1.3em;
+  color: #99F0FF;
+  margin-top: 60px;
+  margin-left: 70px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.main p {
+  margin-bottom: 2rem;
+}
+
+.main .explanation,
+.main .benefits {
+  text-align: right;
+}
+
+.main .explanation h3,
+.main .benefits h3 {
+  margin-right: 60px;
+  padding-bottom: 10px;
+}
+
+.main .explanation h3::before,
+.main .benefits h3::before {
+  content: "";
+  position: absolute;
+  float: right;
+  right: 40px;
+  padding: 1.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main .explanation h3::before {
+  content: "";
+  background: url("./assets/icon-2.svg") no-repeat;
+  margin-top: -10px;
+}
+
+.main .benefits h3::before {
+  content: "";
+  background: url("./assets/icon-4.svg") no-repeat;
+  margin-top: -15px;
+}
+
+.main .participation h3::before,
+.main .requirements h3::before {
+  content: "";
+  position: absolute;
+  float: left;
+  left: 10px;
+  margin-left: 20px;
+  padding: 1.7em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main .participation h3::before {
+  content: "";
+  background: url("./assets/icon-3.svg") no-repeat;
+  margin-top: -15px;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+.main .requirements h3::before {
+  content: "";
+  background: url("./assets/icon-5.svg") no-repeat;
+  margin-top: -15px;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.main .requirements p:last-child {
+  background-color: #FF11CB;
+  padding: 3rem;
+  border-radius: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.main a:link,
+.main a:visited,
+.main a:active {
+  color: #99F0FF;
+}
+
+.main a:hover {
+  text-decoration: underline;
+}
+
+.main footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main footer a:link,
+.main footer a:visited,
+.main footer a:hover,
+.main footer a:active {
+  width: 50px;
+  height: 50px;
+  padding: 1.5rem;
+  font-size: 0;
+}
+
+.main footer :nth-child(1) {
+  background: url("/assets/html-5.png") center center/50px no-repeat;
+}
+
+.main footer :nth-child(2) {
+  background: url("/assets/css3.png") center center/50px no-repeat;
+}
+
+.main footer :nth-child(3) {
+  background: url("/assets/creative-commons.png") center center/50px no-repeat;
+}
+
+.main footer :nth-child(4) {
+  background: url("/assets/accessibility1.png") center center/50px no-repeat;
+}
+
+.main footer :nth-child(5) {
+  background: url("/assets/github.png") center center/50px no-repeat;
+}
+
+.design-selection {
+  background-color: #271852;
+  padding: 3.5rem;
+  border-radius: 30px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.design-selection h3 {
+  font-size: 1.3em;
+  color: #99F0FF;
+  margin-bottom: 3rem;
+}
+
+.design-selection ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.design-selection li a:link:first-child,
+.design-selection li a:visited,
+.design-selection li a:active {
+  color: #ffffff;
+  font-family: "Audiowide", cursive;
+}
+
+.design-selection li a:hover {
+  text-decoration: underline;
+}
+
+.design-selection a:link,
+.design-selection a:visited,
+.design-selection a:active {
+  color: #FF11CB;
+}
+
+.design-selection a:hover {
+  text-decoration: underline;
+}
+
+.design-archives {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.design-archives h3 {
+  font-size: 1.3em;
+  color: #99F0FF;
+  margin-bottom: 3rem;
+}
+
+.design-archives a:link,
+.design-archives a:visited,
+.design-archives a:active {
+  display: inline-block;
+  width: 130px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 5px;
+  background-color: #FF11CB;
+  color: #ffffff;
+  padding: 1.5rem;
+}
+
+.design-archives .viewall a {
+  background-color: #ffffff;
+  color: #FF11CB;
+}
+
+.design-archives a:hover {
+  background: #aa0085;
+}
+
+.design-archives a:last-of-type:hover {
+  background: #d1d1d1;
+}
+
+.zen-resources {
+  background-color: #EAEAEA;
+  padding: 3.5rem;
+  border-radius: 30px;
+  font-family: "Barlow Condensed", sans-serif;
+  margin-top: 3rem;
+  line-height: 1.5em;
+  margin-bottom: 4rem;
+}
+
+.zen-resources h3 {
+  font-size: 1.3em;
+  color: #FF11CB;
+  margin-bottom: 3rem;
+}
+
+.zen-resources a:link,
+.zen-resources a:visited,
+.zen-resources a:active {
+  color: #271852;
+}
+
+.zen-resources a:hover {
+  text-decoration: underline;
+}
+
+.extra1 {
+  width: 100%;
+  height: 300px;
+  background-image: url(./assets/terra.svg);
+  background-position: top;
+  background-size: 130%, cover;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.extra2 {
+  position: absolute;
+  left: 190px;
+  top: -130px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/lua.svg);
+  background-repeat: no-repeat, no-repeat;
+}
+
+.extra3 {
+  position: absolute;
+  left: -80px;
+  top: -80px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/planet1.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 180px;
+}
+/*# sourceMappingURL=style.css.map */
