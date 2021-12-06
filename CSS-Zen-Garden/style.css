@@ -467,4 +467,16 @@ section .preamble p {
   background-repeat: no-repeat, no-repeat;
   background-size: 180px;
 }
+
+.extra4 {
+  position: absolute;
+  left: 220px;
+  top: 200px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/foguete.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 120px;
+}
 /*# sourceMappingURL=style.css.map */
