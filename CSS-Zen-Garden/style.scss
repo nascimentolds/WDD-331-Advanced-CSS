@@ -1,7 +1,7 @@
-@import 'partials/reset';
-@import 'partials/variables';
-@import 'partials/typography';
-@import 'partials/background';
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/typography";
+@import "partials/background";
 
 html {
   font-size: 62.5%;
@@ -26,6 +26,8 @@ h3 {
 
 .page-wrapper {
   padding: 4rem 4rem;
+
+  background-image: url(./assets/estrelas.svg);
 
   &:first-child {
     margin-top: 10rem;
@@ -126,7 +128,6 @@ section {
 }
 
 .main {
-
   line-height: 1.3em;
 
   h3 {
@@ -160,7 +161,6 @@ section {
       display: flex;
       flex-direction: row;
     }
-
   }
 
   .explanation {
@@ -217,7 +217,6 @@ section {
       text-align: center;
       margin-top: 30px;
     }
-
   }
 
   a:link,
@@ -264,9 +263,7 @@ section {
     :nth-child(5) {
       background: url("/assets/github.png") center center/50px no-repeat;
     }
-
   }
-
 }
 
 .design-selection {
@@ -288,7 +285,6 @@ section {
   }
 
   li {
-
     a:link:first-child,
     a:visited,
     a:active {
@@ -310,7 +306,6 @@ section {
   a:hover {
     text-decoration: underline;
   }
-
 }
 
 .design-archives {
@@ -348,7 +343,6 @@ section {
   a:last-of-type:hover {
     background: darken($color-6, 10%);
   }
-
 }
 
 .zen-resources {
@@ -375,7 +369,6 @@ section {
   a:hover {
     text-decoration: underline;
   }
-
 }
 
 .extra1 {
@@ -394,7 +387,7 @@ section {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-image: url(./assets/lua.svg);  
+  background-image: url(./assets/lua.svg);
   background-repeat: no-repeat, no-repeat;
 }
 
@@ -405,7 +398,7 @@ section {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-image: url(./assets/planet1.png);  
+  background-image: url(./assets/planet1.png);
   background-repeat: no-repeat, no-repeat;
   background-size: 180px;
 }
@@ -417,8 +410,19 @@ section {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-image: url(./assets/foguete.svg);  
+  background-image: url(./assets/foguete.svg);
   background-repeat: no-repeat, no-repeat;
   background-size: 120px;
 }
 
+.extra5 {
+  position: absolute;
+  left: 100px;
+  top: 0px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/planet2.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 120px;
+}
