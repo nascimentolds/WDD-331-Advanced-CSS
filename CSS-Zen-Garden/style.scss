@@ -2,6 +2,7 @@
 @import "partials/variables";
 @import "partials/typography";
 @import "partials/background";
+@import "partials/breakpoints";
 
 html {
   font-size: 62.5%;
@@ -11,6 +12,10 @@ body {
   font-size: 1.7em;
   font-family: $primary-font;
   color: $color-5;
+
+  @include respond-to("md") {
+    font-size: 2em;
+  }
 }
 
 a {
@@ -46,6 +51,19 @@ header {
     text-transform: uppercase;
     line-height: 1.3em;
     color: $color-3;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 150px;
+      top: 80px;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-image: url(./assets/cometa.svg);
+      background-repeat: no-repeat, no-repeat;
+      background-size: 30px;
+    }
   }
 
   h2 {
@@ -72,7 +90,7 @@ header {
     a:active {
       display: inline-block;
       width: 130px;
-      border-radius: 10px;
+      border-radius: 25px;
       text-align: center;
       margin: 5px;
       background-color: $color-3;
@@ -380,49 +398,48 @@ section {
   background-repeat: no-repeat, no-repeat;
 }
 
-.extra2 {
+.extra2,
+.extra3,
+.extra4,
+.extra5,
+.extra6 {
   position: absolute;
-  left: 190px;
-  top: -130px;
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-image: url(./assets/lua.svg);
   background-repeat: no-repeat, no-repeat;
 }
 
+.extra2 {
+  left: 190px;
+  top: -130px;
+  background-image: url(./assets/lua.svg);
+}
+
 .extra3 {
-  position: absolute;
   left: -80px;
   top: -80px;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
   background-image: url(./assets/planet1.png);
-  background-repeat: no-repeat, no-repeat;
   background-size: 180px;
 }
 
 .extra4 {
-  position: absolute;
   left: 220px;
   top: 200px;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
   background-image: url(./assets/foguete.svg);
-  background-repeat: no-repeat, no-repeat;
   background-size: 120px;
 }
 
 .extra5 {
-  position: absolute;
   left: 100px;
   top: 0px;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
   background-image: url(./assets/planet2.svg);
-  background-repeat: no-repeat, no-repeat;
   background-size: 120px;
+}
+
+.extra6 {
+  left: 300px;
+  top: 270px;
+  background-image: url(./assets/planet1.svg);
+  background-size: 180px;
 }
