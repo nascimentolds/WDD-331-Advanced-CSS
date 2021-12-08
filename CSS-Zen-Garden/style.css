@@ -134,6 +134,10 @@ header h2 abbr {
   color: #FF11CB;
 }
 
+.summary :first-child {
+  max-width: 90%;
+}
+
 .summary p:last-child {
   margin-top: 3rem;
   line-height: 3em;
@@ -509,5 +513,17 @@ section .preamble p {
   top: 270px;
   background-image: url(./assets/planet1.svg);
   background-size: 180px;
+}
+
+@media (min-width: 400px) {
+  .extra6 {
+    left: 400px;
+  }
+}
+
+@media (min-width: 576px) {
+  .extra6 {
+    left: 500px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

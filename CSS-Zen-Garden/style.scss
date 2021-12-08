@@ -80,6 +80,10 @@ header {
 }
 
 .summary {
+  :first-child {
+    max-width: 90%;
+  }
+
   p:last-child {
     margin-top: 3rem;
     line-height: 3em;
@@ -442,4 +446,12 @@ section {
   top: 270px;
   background-image: url(./assets/planet1.svg);
   background-size: 180px;
+
+  @include respond-to("xs") {
+    left: 400px;
+  }
+
+  @include respond-to("sm") {
+    left: 500px;
+  }
 }
