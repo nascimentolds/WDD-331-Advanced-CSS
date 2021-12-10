@@ -32,8 +32,6 @@ h3 {
 .page-wrapper {
   padding: 4rem 4rem;
 
-  background-image: url(./assets/estrelas.svg);
-
   &:first-child {
     margin-top: 10rem;
     margin-bottom: 5rem;
@@ -88,6 +86,12 @@ header {
     margin-top: 3rem;
     line-height: 3em;
     text-align: right;
+    max-width: 280px;
+
+    @include respond-to("md") {
+      max-width: 320px;
+    }
+  
 
     a:link,
     a:visited,
@@ -418,6 +422,29 @@ section {
   left: 190px;
   top: -130px;
   background-image: url(./assets/lua.svg);
+  max-width: 500px;
+
+  @include respond-to("xs") {
+    left: 230px;
+  }
+
+  @include respond-to("sm") {
+    left: 380px;
+    top: -150px
+  }
+
+  @include respond-to("md") {
+    left: 520px;
+  }
+
+  @include respond-to("lg") {
+    left: 800px;
+  }
+
+  @include respond-to("xl") {
+    left: 1000px;
+  }
+
 }
 
 .extra3 {
@@ -428,7 +455,7 @@ section {
 }
 
 .extra4 {
-  left: 220px;
+  left: 240px;
   top: 200px;
   background-image: url(./assets/foguete.svg);
   background-size: 120px;
@@ -448,10 +475,30 @@ section {
   background-size: 180px;
 
   @include respond-to("xs") {
-    left: 400px;
+    left: 350px;
+    top: 300px;
   }
 
   @include respond-to("sm") {
-    left: 500px;
+    left: 550px;
+    top: 330px;
+  }
+
+  @include respond-to("md") {
+    left: 750px;
+    top: 350px;
+    background-size: 200px;
+  }
+
+  @include respond-to("lg") {
+    left: 950px;
+    top: 380px;
+    background-size: 220px;
+  }
+
+  @include respond-to("xl") {
+    left: 1200px;
+    top: 400px;
+    background-size: 220px;
   }
 }

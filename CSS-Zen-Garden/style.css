@@ -89,7 +89,6 @@ h3 {
 
 .page-wrapper {
   padding: 4rem 4rem;
-  background-image: url(./assets/estrelas.svg);
 }
 
 .page-wrapper:first-child {
@@ -142,6 +141,13 @@ header h2 abbr {
   margin-top: 3rem;
   line-height: 3em;
   text-align: right;
+  max-width: 280px;
+}
+
+@media (min-width: 768px) {
+  .summary p:last-child {
+    max-width: 320px;
+  }
 }
 
 .summary p:last-child a:link,
@@ -485,6 +491,38 @@ section .preamble p {
   left: 190px;
   top: -130px;
   background-image: url(./assets/lua.svg);
+  max-width: 500px;
+}
+
+@media (min-width: 400px) {
+  .extra2 {
+    left: 230px;
+  }
+}
+
+@media (min-width: 576px) {
+  .extra2 {
+    left: 380px;
+    top: -150px;
+  }
+}
+
+@media (min-width: 768px) {
+  .extra2 {
+    left: 520px;
+  }
+}
+
+@media (min-width: 992px) {
+  .extra2 {
+    left: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .extra2 {
+    left: 1000px;
+  }
 }
 
 .extra3 {
@@ -495,7 +533,7 @@ section .preamble p {
 }
 
 .extra4 {
-  left: 220px;
+  left: 240px;
   top: 200px;
   background-image: url(./assets/foguete.svg);
   background-size: 120px;
@@ -517,13 +555,39 @@ section .preamble p {
 
 @media (min-width: 400px) {
   .extra6 {
-    left: 400px;
+    left: 350px;
+    top: 300px;
   }
 }
 
 @media (min-width: 576px) {
   .extra6 {
-    left: 500px;
+    left: 550px;
+    top: 330px;
+  }
+}
+
+@media (min-width: 768px) {
+  .extra6 {
+    left: 750px;
+    top: 350px;
+    background-size: 200px;
+  }
+}
+
+@media (min-width: 992px) {
+  .extra6 {
+    left: 950px;
+    top: 380px;
+    background-size: 220px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .extra6 {
+    left: 1200px;
+    top: 400px;
+    background-size: 220px;
   }
 }
 /*# sourceMappingURL=style.css.map */
