@@ -1,0 +1,59 @@
+.summary {
+    margin-top: 30px;
+
+    :first-child {
+        max-width: 90%;
+
+        @include respond-to("xs") {
+            max-width: 300px;
+        }
+
+        @include respond-to("sm") {
+        }
+
+        @include respond-to("md") {
+        }
+
+        @include respond-to("lg") {
+        }
+
+        @include respond-to("xl") {
+        }
+    }
+
+    p:last-child {
+        margin-top: 3rem;
+        line-height: 3em;
+        text-align: right;
+        max-width: 280px;
+
+        @include respond-to("md") {
+            max-width: 320px;
+        }
+
+        a:link,
+        a:visited,
+        a:active {
+            display: inline-block;
+            width: 130px;
+            border-radius: 25px;
+            text-align: center;
+            margin: 5px;
+            background-color: $color-3;
+            color: $color-5;
+        }
+
+        a:last-of-type {
+            background-color: $color-5;
+            color: $color-3;
+        }
+
+        a:hover {
+            background: darken($color-3, 20%);
+        }
+
+        a:last-of-type:hover {
+            background: darken($color-6, 10%);
+        }
+    }
+}

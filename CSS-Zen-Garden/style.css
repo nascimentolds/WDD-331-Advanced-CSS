@@ -1,3 +1,6 @@
+/***********************
+  reset
+***********************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -54,12 +57,27 @@ table {
   border-spacing: 0;
 }
 
+/***********************
+  variables
+***********************/
+/***********************
+  typography
+***********************/
+/***********************
+  breakpoints
+***********************/
+/***********************
+  background
+***********************/
 body {
   /* this is the page background */
   background: -webkit-gradient(linear, left top, left bottom, from(#271852), to(#5B2D7E));
   background: linear-gradient(#271852, #5B2D7E);
 }
 
+/***********************
+  general
+***********************/
 html {
   font-size: 62.5%;
 }
@@ -100,6 +118,15 @@ abbr {
   text-decoration: none;
 }
 
+/***********************
+  header
+***********************/
+@media (min-width: 992px) {
+  header {
+    margin-left: 200px;
+  }
+}
+
 header h1 {
   width: 60%;
   font-size: 2em;
@@ -129,12 +156,44 @@ header h2 {
   margin-top: 3rem;
 }
 
+@media (min-width: 400px) {
+  header h2 {
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 576px) {
+  header h2 {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  header h2 {
+    max-width: 400px;
+    font-size: 2.5em;
+  }
+}
+
 header h2 abbr {
   color: #FF11CB;
 }
 
+/***********************
+  summary
+***********************/
+.summary {
+  margin-top: 30px;
+}
+
 .summary :first-child {
   max-width: 90%;
+}
+
+@media (min-width: 400px) {
+  .summary :first-child {
+    max-width: 300px;
+  }
 }
 
 .summary p:last-child {
@@ -175,6 +234,9 @@ header h2 abbr {
   background: #d1d1d1;
 }
 
+/***********************
+  section
+***********************/
 section .preamble {
   margin-top: 5rem;
   line-height: 1.3em;
@@ -211,6 +273,9 @@ section .preamble p {
   margin-bottom: 2rem;
 }
 
+/***********************
+  main
+***********************/
 .main {
   line-height: 1.3em;
 }
@@ -361,6 +426,9 @@ section .preamble p {
   background: url("/assets/github.png") center center/50px no-repeat;
 }
 
+/***********************
+  design-selection
+***********************/
 .design-selection {
   background-color: #271852;
   padding: 3.5rem;
@@ -403,6 +471,9 @@ section .preamble p {
   text-decoration: underline;
 }
 
+/***********************
+  design-archives
+***********************/
 .design-archives {
   text-align: center;
   margin-top: 3rem;
@@ -440,6 +511,9 @@ section .preamble p {
   background: #d1d1d1;
 }
 
+/***********************
+  zen-resources
+***********************/
 .zen-resources {
   background-color: #EAEAEA;
   padding: 3.5rem;
@@ -466,6 +540,10 @@ section .preamble p {
   text-decoration: underline;
 }
 
+/***********************
+  extras
+***********************/
+/* earth on footer */
 .extra1 {
   width: 100%;
   height: 300px;
@@ -487,6 +565,7 @@ section .preamble p {
   background-repeat: no-repeat, no-repeat;
 }
 
+/* moon on top right */
 .extra2 {
   left: 190px;
   top: -130px;
@@ -515,16 +594,21 @@ section .preamble p {
 
 @media (min-width: 992px) {
   .extra2 {
-    left: 800px;
+    left: 780px;
+    top: -170px;
+    max-width: 600px;
   }
 }
 
 @media (min-width: 1200px) {
   .extra2 {
-    left: 1000px;
+    left: 950px;
+    top: -200px;
+    max-width: 700px;
   }
 }
 
+/* orange planet on top left */
 .extra3 {
   left: -80px;
   top: -80px;
@@ -532,6 +616,7 @@ section .preamble p {
   background-size: 180px;
 }
 
+/* rocket below the moon */
 .extra4 {
   left: 240px;
   top: 200px;
@@ -539,6 +624,45 @@ section .preamble p {
   background-size: 120px;
 }
 
+@media (min-width: 400px) {
+  .extra4 {
+    left: 280px;
+    top: 250px;
+  }
+}
+
+@media (min-width: 576px) {
+  .extra4 {
+    left: 400px;
+    top: 280px;
+    background-size: 160px;
+  }
+}
+
+@media (min-width: 768px) {
+  .extra4 {
+    left: 550px;
+    top: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .extra4 {
+    left: 750px;
+    top: 280px;
+    background-size: 180px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .extra4 {
+    left: 900px;
+    top: 300px;
+    background-size: 200px;
+  }
+}
+
+/* blue planet on straight top */
 .extra5 {
   left: 100px;
   top: 0px;
@@ -546,6 +670,41 @@ section .preamble p {
   background-size: 120px;
 }
 
+@media (min-width: 400px) {
+  .extra5 {
+    left: 130px;
+  }
+}
+
+@media (min-width: 576px) {
+  .extra5 {
+    left: 170px;
+    background-size: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  .extra5 {
+    left: 220px;
+    background-size: 180px;
+  }
+}
+
+@media (min-width: 992px) {
+  .extra5 {
+    left: 400px;
+    background-size: 220px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .extra5 {
+    left: 700px;
+    background-size: 250px;
+  }
+}
+
+/* orange planet below the moon */
 .extra6 {
   left: 300px;
   top: 270px;
@@ -578,7 +737,7 @@ section .preamble p {
 @media (min-width: 992px) {
   .extra6 {
     left: 950px;
-    top: 380px;
+    top: 400px;
     background-size: 220px;
   }
 }
@@ -586,7 +745,7 @@ section .preamble p {
 @media (min-width: 1200px) {
   .extra6 {
     left: 1200px;
-    top: 400px;
+    top: 480px;
     background-size: 220px;
   }
 }

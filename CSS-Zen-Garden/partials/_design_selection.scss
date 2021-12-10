@@ -1,0 +1,41 @@
+.design-selection {
+    background-color: $color-1;
+    padding: 3.5rem;
+    border-radius: 30px;
+    font-family: $primary-font;
+
+    h3 {
+        font-size: 1.3em;
+        color: $color-4;
+        margin-bottom: 3rem;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    li {
+        a:link:first-child,
+        a:visited,
+        a:active {
+            color: $color-5;
+            font-family: $secondary-font;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    a:link,
+    a:visited,
+    a:active {
+        color: $color-3;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
