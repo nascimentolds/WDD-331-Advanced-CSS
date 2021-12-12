@@ -1,6 +1,6 @@
 header {
     @include respond-to("lg") {
-        margin-left: 200px;
+        margin-left: 150px;
     }
 
     h1 {
@@ -21,6 +21,16 @@ header {
             background-image: url(./assets/cometa.svg);
             background-repeat: no-repeat, no-repeat;
             background-size: 30px;
+
+        
+            @include respond-to("md") {
+                left: 400px;
+            }
+        
+            @include respond-to("lg") {
+                left: 600px;
+                background-size: 40px;
+            }
         }
     }
 

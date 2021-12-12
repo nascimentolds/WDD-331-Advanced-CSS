@@ -3,6 +3,12 @@
     padding: 3.5rem;
     border-radius: 30px;
     font-family: $primary-font;
+    margin-top: 30px;
+
+    @include respond-to("lg") {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
 
     h3 {
         font-size: 1.3em;
@@ -14,6 +20,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
+
+    
+        @include respond-to("md") {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
     }
 
     li {
@@ -26,6 +37,19 @@
 
         a:hover {
             text-decoration: underline;
+        }
+
+        &::before{
+            content: '';
+            position: relative;
+            left: 0;
+            top: 0;
+            padding: 0px 10px;
+            background-image: url("./assets/dot.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-size: 18px;
+            margin-right: 5px;
         }
     }
 

@@ -6,6 +6,10 @@
     background-position: top;
     background-size: 130%, cover;
     background-repeat: no-repeat, no-repeat;
+
+    @include respond-to("lg") {
+        background-size: 200%
+    }
 }
 
 .extra2,
@@ -59,12 +63,18 @@
     top: -80px;
     background-image: url(./assets/planet1.png);
     background-size: 180px;
+
+    @include respond-to("md") {
+        left: -70px;
+        top: -70px;
+        background-size: 200px;
+    }
 }
 
 /* rocket below the moon */
 .extra4 {
     left: 240px;
-    top: 200px;
+    top: 180px;
     background-image: url(./assets/foguete.svg);
     background-size: 120px;
 
@@ -95,6 +105,8 @@
         top: 300px;
         background-size: 200px;
     }
+
+    animation: rocket 5s linear infinite alternate;
 }
 
 /* blue planet on straight top */

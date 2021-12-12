@@ -86,6 +86,8 @@ body {
   font-size: 1.7em;
   font-family: "Barlow Condensed", sans-serif;
   color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 @media (min-width: 768px) {
@@ -114,6 +116,17 @@ h3 {
   margin-bottom: 5rem;
 }
 
+.page-wrapper:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 1200px;
+  background-image: url("./assets/estrelas.png");
+}
+
 abbr {
   text-decoration: none;
 }
@@ -123,7 +136,7 @@ abbr {
 ***********************/
 @media (min-width: 992px) {
   header {
-    margin-left: 200px;
+    margin-left: 150px;
   }
 }
 
@@ -146,6 +159,19 @@ header h1:after {
   background-image: url(./assets/cometa.svg);
   background-repeat: no-repeat, no-repeat;
   background-size: 30px;
+}
+
+@media (min-width: 768px) {
+  header h1:after {
+    left: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  header h1:after {
+    left: 600px;
+    background-size: 40px;
+  }
 }
 
 header h2 {
@@ -184,15 +210,42 @@ header h2 abbr {
 ***********************/
 .summary {
   margin-top: 30px;
-}
-
-.summary :first-child {
-  max-width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (min-width: 400px) {
-  .summary :first-child {
+  .summary {
     max-width: 300px;
+  }
+}
+
+@media (min-width: 576px) {
+  .summary {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .summary {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  .summary {
+    margin-left: 150px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .summary {
+    max-width: 700px;
   }
 }
 
@@ -203,9 +256,26 @@ header h2 abbr {
   max-width: 280px;
 }
 
+@media (min-width: 576px) {
+  .summary p:last-child {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-right: 25px;
+  }
+}
+
 @media (min-width: 768px) {
   .summary p:last-child {
     max-width: 320px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .summary p:last-child {
+    max-width: 380px;
   }
 }
 
@@ -219,6 +289,22 @@ header h2 abbr {
   margin: 5px;
   background-color: #FF11CB;
   color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .summary p:last-child a:link,
+  .summary p:last-child a:visited,
+  .summary p:last-child a:active {
+    width: 150px;
+  }
+}
+
+@media (min-width: 992px) {
+  .summary p:last-child a:link,
+  .summary p:last-child a:visited,
+  .summary p:last-child a:active {
+    width: 200px;
+  }
 }
 
 .summary p:last-child a:last-of-type {
@@ -242,6 +328,13 @@ section .preamble {
   line-height: 1.3em;
 }
 
+@media (min-width: 992px) {
+  section .preamble {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
 section .preamble h3 {
   font-size: 1.3em;
   color: #99F0FF;
@@ -258,7 +351,7 @@ section .preamble h3::before {
   float: left;
   left: 10px;
   margin-left: 20px;
-  margin-top: -5px;
+  margin-top: -20px;
   padding: 1.7em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -267,6 +360,15 @@ section .preamble h3::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-animation: rot 5s linear infinite alternate;
+          animation: rot 5s linear infinite alternate;
+}
+
+@media (min-width: 992px) {
+  section .preamble h3::before {
+    left: 150px;
+    margin-top: -20px;
+  }
 }
 
 section .preamble p {
@@ -278,6 +380,13 @@ section .preamble p {
 ***********************/
 .main {
   line-height: 1.3em;
+}
+
+@media (min-width: 992px) {
+  .main {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
 }
 
 .main h3 {
@@ -320,16 +429,27 @@ section .preamble p {
           flex-direction: row;
 }
 
+@media (min-width: 992px) {
+  .main .explanation h3::before,
+  .main .benefits h3::before {
+    right: 180px;
+  }
+}
+
 .main .explanation h3::before {
   content: "";
   background: url("./assets/icon-2.svg") no-repeat;
-  margin-top: -10px;
+  margin-top: -20px;
+  -webkit-animation: rot 5s linear infinite alternate;
+          animation: rot 5s linear infinite alternate;
 }
 
 .main .benefits h3::before {
   content: "";
   background: url("./assets/icon-4.svg") no-repeat;
-  margin-top: -15px;
+  margin-top: -25px;
+  -webkit-animation: rot 5s linear infinite alternate;
+          animation: rot 5s linear infinite alternate;
 }
 
 .main .participation h3::before,
@@ -349,20 +469,32 @@ section .preamble p {
           flex-direction: row;
 }
 
+@media (min-width: 992px) {
+  .main .participation h3::before,
+  .main .requirements h3::before {
+    left: 150px;
+    margin-top: -20px;
+  }
+}
+
 .main .participation h3::before {
   content: "";
   background: url("./assets/icon-3.svg") no-repeat;
-  margin-top: -15px;
+  margin-top: -25px;
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
+  -webkit-animation: rot 5s linear infinite alternate;
+          animation: rot 5s linear infinite alternate;
 }
 
 .main .requirements h3::before {
   content: "";
   background: url("./assets/icon-5.svg") no-repeat;
-  margin-top: -15px;
+  margin-top: -25px;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
+  -webkit-animation: rot 5s linear infinite alternate;
+          animation: rot 5s linear infinite alternate;
 }
 
 .main .requirements p:last-child {
@@ -370,7 +502,8 @@ section .preamble p {
   padding: 3rem;
   border-radius: 30px;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .main a:link,
@@ -434,6 +567,14 @@ section .preamble p {
   padding: 3.5rem;
   border-radius: 30px;
   font-family: "Barlow Condensed", sans-serif;
+  margin-top: 30px;
+}
+
+@media (min-width: 992px) {
+  .design-selection {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
 }
 
 .design-selection h3 {
@@ -450,6 +591,13 @@ section .preamble p {
   gap: 2rem;
 }
 
+@media (min-width: 768px) {
+  .design-selection ul {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .design-selection li a:link:first-child,
 .design-selection li a:visited,
 .design-selection li a:active {
@@ -459,6 +607,19 @@ section .preamble p {
 
 .design-selection li a:hover {
   text-decoration: underline;
+}
+
+.design-selection li::before {
+  content: '';
+  position: relative;
+  left: 0;
+  top: 0;
+  padding: 0px 10px;
+  background-image: url("./assets/dot.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 18px;
+  margin-right: 5px;
 }
 
 .design-selection a:link,
@@ -490,12 +651,38 @@ section .preamble p {
 .design-archives a:active {
   display: inline-block;
   width: 130px;
-  border-radius: 10px;
+  border-radius: 25px;
   text-align: center;
   margin: 5px;
   background-color: #FF11CB;
   color: #ffffff;
   padding: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .design-archives a:link,
+  .design-archives a:visited,
+  .design-archives a:active {
+    width: 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .design-archives ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .design-archives ul li {
+    padding: 20px 20px;
+  }
 }
 
 .design-archives .viewall a {
@@ -522,6 +709,35 @@ section .preamble p {
   margin-top: 3rem;
   line-height: 1.5em;
   margin-bottom: 4rem;
+}
+
+@media (min-width: 992px) {
+  .zen-resources {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+
+.zen-resources ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 400px) {
+  .zen-resources ul {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .zen-resources ul {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .zen-resources h3 {
@@ -551,6 +767,12 @@ section .preamble p {
   background-position: top;
   background-size: 130%, cover;
   background-repeat: no-repeat, no-repeat;
+}
+
+@media (min-width: 992px) {
+  .extra1 {
+    background-size: 200%;
+  }
 }
 
 .extra2,
@@ -616,12 +838,22 @@ section .preamble p {
   background-size: 180px;
 }
 
+@media (min-width: 768px) {
+  .extra3 {
+    left: -70px;
+    top: -70px;
+    background-size: 200px;
+  }
+}
+
 /* rocket below the moon */
 .extra4 {
   left: 240px;
-  top: 200px;
+  top: 180px;
   background-image: url(./assets/foguete.svg);
   background-size: 120px;
+  -webkit-animation: rocket 5s linear infinite alternate;
+          animation: rocket 5s linear infinite alternate;
 }
 
 @media (min-width: 400px) {
@@ -747,6 +979,52 @@ section .preamble p {
     left: 1200px;
     top: 480px;
     background-size: 220px;
+  }
+}
+
+/***********************
+  animations
+***********************/
+@-webkit-keyframes rot {
+  from {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes rot {
+  from {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes rocket {
+  from {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes rocket {
+  from {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=style.css.map */
